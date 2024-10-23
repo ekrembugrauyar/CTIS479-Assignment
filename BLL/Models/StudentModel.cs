@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BLL.DAL;
 
 namespace BLL.Models
 {
-    internal class StudentModel
+    public class StudentModel
     {
-        public int Id { get; set; }
+        public Student Record { get; set; }
 
-        public string Name { get; set; }
+        public string Name => Record.Name;
 
-        public string Surname { get; set; }
+        public string Surname => Record.Surname;
 
-        public DateTime? BirthDate { get; set; }
+        public DateTime? BirthDate => Record.BirthDate;
 
-        public decimal? GPA { get; set; }
+        public decimal? Gpa => Record.Gpa;
     }
 }
